@@ -6,6 +6,6 @@ before_install:
     - docker build -t jy/drl -f Dockerfile.dev .
 
 script : 
-    - docker run -e CI =true jy/drl npm run test -- --coverage
+    - docker run -e CI=true jy/drl npm run test -- --coverage
 
 language : generic
