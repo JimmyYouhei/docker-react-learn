@@ -10,10 +10,10 @@ script :
 
 deploy :
     provider : elasticbeanstalk
-    region : "us-east-2"
+    region : "ap-southeast-1"
     app : "DockerLearn"
     env : "DockerLearn-env"
-    bucket_name : "elasticbeanstalk-us-east-2-121477722798"
+    bucket_name : "elasticbeanstalk-ap-southeast-1-121477722798"
     bucket_path : "DockerLearn"
     on:
         branch: master
