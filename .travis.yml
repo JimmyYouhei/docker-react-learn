@@ -8,4 +8,14 @@ before_install:
 script : 
     - docker run -e CI=true jy/drl npm run test -- --coverage
 
+deploy :
+    provider : elasticbeanstalk
+    region : "us-east-2"
+    app : "DockerLearn"
+    env : "DockerLearn-env"
+    bucket_name : "elasticbeanstalk-us-east-2-121477722798"
+    bucket_path : "DockerLearn"
+    on:
+        branch: master
+
 language : generic
